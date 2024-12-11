@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Slider Game</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Cookie Clicker Inspired</h1>
+    <div id="score">Cookies: 0</div>
+    <button id="cookie" class="cookie-btn">🍪</button>
+
+    <div class="shop">
+      <h2>Shop</h2>
+
+      <!-- Clickers Section -->
+      <div class="shop-section">
+        <h3>Clickers</h3>
+        <div class="upgrade">
+          <button id="autoClicker" class="shop-item">Auto Clicker (Cost: 10)</button>
+          <span id="autoClickerCount">Owned: 0</span>
+        </div>
+        
+        <div class="upgrade">
+            <button id="buyRotaryDial" class="shop-item">Buy Rotary Dial (Cost: 80)</button>
+          </div>
+          
+          <div class="upgrade">
+            <button id="buyToggleSwitch" class="shop-item">Buy Toggle Switch (Cost: 100)</button>
+          </div>
+      </div>
+
+      <!-- Clicker Upgrades Section -->
+      <div class="shop-section">
+        <h3>Clicker Upgrades</h3>
+        <div class="upgrade">
+          <button id="clickerMultiplier" class="shop-item">Clicker Multiplier x2 (Cost: 30)</button>
+          <span id="clickerMultiplierCount">Owned: 0</span>
+        </div>
+        <div class="upgrade">
+          <button id="cookieMultiplierUpgrade" class="shop-item">Cookie Multiplier x2 (Cost: 40)</button>
+          <span id="cookieMultiplierCount">Owned: 0</span>
+        </div>
+        <div class="upgrade">
+          <button id="horizontalMultiplierUpgrade" class="shop-item">Horizontal Slider Multiplier x2 (Cost: 60)</button>
+          <span id="horizontalMultiplierCount">Owned: 0</span>
+        </div>
+        <div class="upgrade">
+          <button id="verticalMultiplierUpgrade" class="shop-item">Vertical Slider Multiplier x2 (Cost: 70)</button>
+          <span id="verticalMultiplierCount">Owned: 0</span>
+        </div>
+      </div>
+
+      <!-- Upgrades Section -->
+      <div class="shop-section">
+        <h3>Upgrades</h3>
+        <div class="upgrade">
+          <button id="multiplier" class="shop-item">Manual Multiplier x2 (Cost: 50)</button>
+          <span id="multiplierCount">Owned: 0</span>
+        </div>
+        <div class="upgrade">
+          <button id="buyHorizontalSlider" class="shop-item">Buy Horizontal Slider (Cost: 30)</button>
+        </div>
+        <div class="upgrade">
+          <button id="buyVerticalSlider" class="shop-item">Buy Vertical Slider (Cost: 50)</button>
+        </div>
+        <div class="upgrade">
+          <button id="unlockHighlight" class="shop-item">Unlock Highlight (Cost: 100)</button>
+        </div>
+        <div class="upgrade">
+          <button id="sliderFollowCursorUpgrade" class="shop-item">Slider Follows Cursor (Cost: 80)</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="sliders">
+      <div class="slider-container">
+        <label>Horizontal Slider</label>
+        <div class="custom-slider horizontal locked" id="horizontalSlider">
+          <div class="track"></div>
+          <div class="knob"></div>
+        </div>
+      </div>
+
+      <div class="slider-container">
+        <label>Vertical Slider</label>
+        <div class="custom-slider vertical locked" id="verticalSlider">
+          <div class="track"></div>
+          <div class="knob"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rotary-container">
+    <label>Rotary Dial</label>
+    <div class="rotary locked" id="rotaryDial">
+      <div class="rotary-knob"></div>
+    </div>
+  </div>
+  
+  <div class="toggle-container">
+    <label>Toggle Switch</label>
+    <div class="toggle-switch locked" id="toggleSwitch">
+      <div class="toggle-knob"></div>
+    </div>
+  </div>
+  
+  <footer>Inspired by Cookie Clicker</footer>
+
+  <!-- Modular Script Files -->
+  <script type="module" src="main.js"></script>
+  <script type="module" src="shop.js"></script>
+  <script type="module" src="sliders.js"></script>
+  <script type="module" src="highlight.js"></script>
+  <script type="module" src="autoClickers.js"></script>
+</body>
+</html>
